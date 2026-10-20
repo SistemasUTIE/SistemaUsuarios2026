@@ -1,0 +1,294 @@
+﻿// Sistema visual compartido de Usuarios IEEN. Las reglas quedan acotadas
+// a las pÃ¡ginas de esta aplicaciÃ³n.
+:root {
+  --ieen-brand: #5b2d82;
+  --ieen-brand-strong: #452263;
+  --ieen-brand-secondary: #73509a;
+  --ieen-brand-soft: #f0e9f7;
+  --ieen-brand-gradient: linear-gradient(135deg, #4f2d8f 0%, #5b2d82 55%, #73509a 100%);
+  --ieen-page-top: #f7f5fb;
+  --ieen-page-bottom: #f2f4fb;
+  --ieen-surface: #fff;
+  --ieen-surface-soft: #f7f3ff;
+  --ieen-border: rgba(94, 54, 134, 0.12);
+  --ieen-border-strong: #d8c8e5;
+  --ieen-text: #211b2d;
+  --ieen-text-muted: #6f6780;
+  --ieen-radius-card: 22px;
+  --ieen-shadow-card: 0 12px 30px rgba(80, 46, 120, 0.07);
+}
+
+.perfiles-page.perfiles-page.perfiles-page,
+.usuarios-page.usuarios-page.usuarios-page,
+.sistemas-page.sistemas-page.sistemas-page,
+.modulos-page.modulos-page.modulos-page,
+.permisos-page.permisos-page.permisos-page,
+.bulk-page.bulk-page.bulk-page {
+  min-height: 100%;
+  padding: 28px;
+  align-content: start;
+  gap: 22px;
+  background: radial-gradient(circle at top left, rgba(173, 128, 255, 0.1), transparent 20%),
+    linear-gradient(180deg, var(--ieen-page-top) 0%, var(--ieen-page-bottom) 100%);
+  color: var(--ieen-text);
+}
+
+.perfiles-page.perfiles-page .perfiles-hero,
+.usuarios-page.usuarios-page .usuarios-hero,
+.sistemas-page.sistemas-page .sistemas-hero,
+.modulos-page.modulos-page .modulos-hero,
+.permisos-page.permisos-page .permisos-hero,
+.bulk-page.bulk-page .bulk-hero {
+  min-height: 176px;
+  padding: 30px 34px;
+  border-radius: 22px;
+  background: var(--ieen-brand-gradient);
+  box-shadow: 0 18px 38px rgba(76, 40, 111, 0.17);
+}
+
+.perfiles-page.perfiles-page .perfiles-hero h1,
+.perfiles-page.perfiles-page .perfiles-hero p,
+.usuarios-page.usuarios-page .usuarios-hero h1,
+.usuarios-page.usuarios-page .usuarios-hero p,
+.sistemas-page.sistemas-page .sistemas-hero h1,
+.sistemas-page.sistemas-page .sistemas-hero p,
+.modulos-page.modulos-page .modulos-hero h1,
+.modulos-page.modulos-page .modulos-hero p,
+.permisos-page.permisos-page .permisos-hero h1,
+.permisos-page.permisos-page .permisos-hero p,
+.bulk-page.bulk-page .bulk-hero h1,
+.bulk-page.bulk-page .bulk-hero p {
+  color: #fff;
+}
+
+.perfiles-page.perfiles-page .perfiles-hero p,
+.usuarios-page.usuarios-page .usuarios-hero p,
+.sistemas-page.sistemas-page .sistemas-hero p,
+.modulos-page.modulos-page .modulos-hero p,
+.permisos-page.permisos-page .permisos-hero p,
+.bulk-page.bulk-page .bulk-hero p {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.perfiles-page.perfiles-page .hero-chip,
+.usuarios-page.usuarios-page .hero-chip,
+.sistemas-page.sistemas-page .hero-chip,
+.modulos-page.modulos-page .hero-chip,
+.permisos-page.permisos-page .hero-chip,
+.bulk-page.bulk-page .hero-chip {
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  background: rgba(255, 255, 255, 0.13);
+  color: #fff;
+}
+
+.perfiles-page.perfiles-page .hero-chip .q-icon,
+.usuarios-page.usuarios-page .hero-chip .q-icon,
+.sistemas-page.sistemas-page .hero-chip .q-icon,
+.modulos-page.modulos-page .hero-chip .q-icon,
+.permisos-page.permisos-page .hero-chip .q-icon,
+.bulk-page.bulk-page .hero-chip .q-icon {
+  color: #fff !important;
+}
+
+.perfiles-page.perfiles-page .content-card,
+.perfiles-page.perfiles-page .stat-card,
+.perfiles-page.perfiles-page .mobile-perfil-card,
+.permisos-page.permisos-page .content-card,
+.permisos-page.permisos-page .stat-card,
+.permisos-page.permisos-page .mobile-permiso-card,
+.usuarios-page.usuarios-page .content-card,
+.usuarios-page.usuarios-page .stat-card,
+.usuarios-page.usuarios-page .employee-mobile-card,
+.sistemas-page.sistemas-page .content-card,
+.sistemas-page.sistemas-page .stat-card,
+.modulos-page.modulos-page .content-card,
+.modulos-page.modulos-page .stat-card,
+.bulk-page.bulk-page .content-card {
+  border: 1px solid var(--ieen-border);
+  border-radius: var(--ieen-radius-card);
+  background: var(--ieen-surface);
+  box-shadow: var(--ieen-shadow-card);
+}
+
+.perfiles-page.perfiles-page .panel-header h2,
+.usuarios-page.usuarios-page .panel-header h2,
+.sistemas-page.sistemas-page .panel-header h2,
+.modulos-page.modulos-page .panel-header h2,
+.permisos-page.permisos-page .panel-header h2 {
+  color: var(--ieen-text);
+}
+
+.perfiles-page.perfiles-page .panel-header p,
+.usuarios-page.usuarios-page .panel-header p,
+.sistemas-page.sistemas-page .panel-header p,
+.modulos-page.modulos-page .panel-header p,
+.permisos-page.permisos-page .panel-header p,
+.bulk-page.bulk-page .panel-header p {
+  color: var(--ieen-text-muted);
+}
+
+.perfiles-page.perfiles-page .primary-action,
+.perfiles-page.perfiles-page .secondary-action,
+.usuarios-page.usuarios-page .primary-action,
+.usuarios-page.usuarios-page .secondary-action,
+.sistemas-page.sistemas-page .primary-action,
+.sistemas-page.sistemas-page .secondary-action,
+.modulos-page.modulos-page .primary-action,
+.modulos-page.modulos-page .secondary-action,
+.permisos-page.permisos-page .primary-action,
+.permisos-page.permisos-page .secondary-action,
+.bulk-page.bulk-page .primary-action,
+.bulk-page.bulk-page .secondary-action {
+  min-height: 42px;
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+.perfiles-page.perfiles-page .primary-action,
+.usuarios-page.usuarios-page .primary-action,
+.sistemas-page.sistemas-page .primary-action,
+.modulos-page.modulos-page .primary-action,
+.permisos-page.permisos-page .primary-action,
+.bulk-page.bulk-page .primary-action {
+  background: var(--ieen-brand) !important;
+  color: #fff !important;
+}
+
+.perfiles-page.perfiles-page .secondary-action,
+.usuarios-page.usuarios-page .secondary-action,
+.sistemas-page.sistemas-page .secondary-action,
+.modulos-page.modulos-page .secondary-action,
+.permisos-page.permisos-page .secondary-action,
+.bulk-page.bulk-page .secondary-action {
+  border: 1px solid var(--ieen-border);
+  background: var(--ieen-surface) !important;
+  color: var(--ieen-brand) !important;
+}
+
+.perfiles-page.perfiles-page .primary-action .q-btn__content,
+.perfiles-page.perfiles-page .primary-action .q-icon,
+.usuarios-page.usuarios-page .primary-action .q-btn__content,
+.usuarios-page.usuarios-page .primary-action .q-icon,
+.sistemas-page.sistemas-page .primary-action .q-btn__content,
+.sistemas-page.sistemas-page .primary-action .q-icon,
+.modulos-page.modulos-page .primary-action .q-btn__content,
+.modulos-page.modulos-page .primary-action .q-icon,
+.permisos-page.permisos-page .primary-action .q-btn__content,
+.permisos-page.permisos-page .primary-action .q-icon,
+.bulk-page.bulk-page .primary-action .q-btn__content,
+.bulk-page.bulk-page .primary-action .q-icon {
+  color: #fff !important;
+}
+
+.perfiles-page.perfiles-page .secondary-action .q-btn__content,
+.perfiles-page.perfiles-page .secondary-action .q-icon,
+.usuarios-page.usuarios-page .secondary-action .q-btn__content,
+.usuarios-page.usuarios-page .secondary-action .q-icon,
+.sistemas-page.sistemas-page .secondary-action .q-btn__content,
+.sistemas-page.sistemas-page .secondary-action .q-icon,
+.modulos-page.modulos-page .secondary-action .q-btn__content,
+.modulos-page.modulos-page .secondary-action .q-icon,
+.permisos-page.permisos-page .secondary-action .q-btn__content,
+.permisos-page.permisos-page .secondary-action .q-icon,
+.bulk-page.bulk-page .secondary-action .q-btn__content,
+.bulk-page.bulk-page .secondary-action .q-icon {
+  color: var(--ieen-brand) !important;
+}
+
+.perfil-dialog.perfil-dialog.perfil-dialog,
+.systems-dialog.systems-dialog.systems-dialog,
+.usuario-dialog.usuario-dialog.usuario-dialog,
+.permissions-dialog.permissions-dialog.permissions-dialog,
+.sistema-dialog.sistema-dialog.sistema-dialog,
+.modulo-dialog.modulo-dialog.modulo-dialog,
+.permiso-dialog.permiso-dialog.permiso-dialog,
+.module-permissions-dialog.module-permissions-dialog.module-permissions-dialog {
+  overflow: hidden;
+  border: 1px solid var(--ieen-border);
+  border-radius: var(--ieen-radius-card);
+  background: var(--ieen-surface);
+  box-shadow: 0 20px 50px rgba(42, 31, 49, 0.16);
+}
+
+.perfil-dialog.perfil-dialog .dialog-hero,
+.systems-dialog.systems-dialog .dialog-hero,
+.usuario-dialog.usuario-dialog .dialog-hero,
+.permissions-dialog.permissions-dialog .dialog-hero,
+.sistema-dialog.sistema-dialog .dialog-hero,
+.modulo-dialog.modulo-dialog .dialog-hero,
+.permiso-dialog.permiso-dialog .dialog-hero,
+.module-permissions-dialog.module-permissions-dialog .dialog-hero {
+  padding: 22px 24px;
+  background: var(--ieen-brand-gradient);
+  color: #fff;
+}
+
+.perfil-dialog.perfil-dialog .dialog-hero h2,
+.perfil-dialog.perfil-dialog .dialog-hero p,
+.systems-dialog.systems-dialog .dialog-hero h2,
+.systems-dialog.systems-dialog .dialog-hero p,
+.usuario-dialog.usuario-dialog .dialog-hero h2,
+.usuario-dialog.usuario-dialog .dialog-hero p,
+.permissions-dialog.permissions-dialog .dialog-hero h2,
+.permissions-dialog.permissions-dialog .dialog-hero p,
+.sistema-dialog.sistema-dialog .dialog-hero h2,
+.sistema-dialog.sistema-dialog .dialog-hero p,
+.modulo-dialog.modulo-dialog .dialog-hero h2,
+.modulo-dialog.modulo-dialog .dialog-hero p,
+.permiso-dialog.permiso-dialog .dialog-hero h2,
+.permiso-dialog.permiso-dialog .dialog-hero p,
+.module-permissions-dialog.module-permissions-dialog .dialog-hero h2,
+.module-permissions-dialog.module-permissions-dialog .dialog-hero p {
+  color: #fff;
+}
+
+.perfiles-page.perfiles-page .perfiles-table thead tr,
+.usuarios-page.usuarios-page .usuarios-table thead tr,
+.sistemas-page.sistemas-page .sistemas-table thead tr,
+.modulos-page.modulos-page .modulos-table thead tr,
+.permisos-page.permisos-page .permisos-table thead tr {
+  background: var(--ieen-brand);
+}
+
+.perfiles-page.perfiles-page .perfiles-table thead th,
+.usuarios-page.usuarios-page .usuarios-table thead th,
+.sistemas-page.sistemas-page .sistemas-table thead th,
+.modulos-page.modulos-page .modulos-table thead th,
+.permisos-page.permisos-page .permisos-table thead th {
+  color: #fff;
+}
+
+@media (max-width: 900px) {
+  .perfiles-page.perfiles-page .perfiles-hero,
+  .usuarios-page.usuarios-page .usuarios-hero,
+  .sistemas-page.sistemas-page .sistemas-hero,
+  .modulos-page.modulos-page .modulos-hero,
+  .permisos-page.permisos-page .permisos-hero,
+  .bulk-page.bulk-page .bulk-hero {
+    min-height: 150px;
+    padding: 26px;
+  }
+}
+
+@media (max-width: 640px) {
+  .perfiles-page.perfiles-page.perfiles-page,
+  .usuarios-page.usuarios-page.usuarios-page,
+  .sistemas-page.sistemas-page.sistemas-page,
+  .modulos-page.modulos-page.modulos-page,
+  .permisos-page.permisos-page.permisos-page,
+  .bulk-page.bulk-page.bulk-page {
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .perfiles-page.perfiles-page .perfiles-hero,
+  .usuarios-page.usuarios-page .usuarios-hero,
+  .sistemas-page.sistemas-page .sistemas-hero,
+  .modulos-page.modulos-page .modulos-hero,
+  .permisos-page.permisos-page .permisos-hero,
+  .bulk-page.bulk-page .bulk-hero {
+    min-height: 0;
+    padding: 22px 20px;
+  }
+}
+
