@@ -1,12 +1,15 @@
 import { boot } from 'quasar/wrappers'
 import axios from 'axios'
 
-const baseURL = import.meta.env.QCLI_API_BASE_URL
-const LOGIN_URL = import.meta.env.QCLI_LOGIN_URL
+//const API_PORT = '9884'
 
-if (!baseURL || !LOGIN_URL) {
-  throw new Error('Configura QCLI_API_BASE_URL y QCLI_LOGIN_URL en el archivo .env.')
-}
+const baseURL = 'http://sistema.ieenayarit.org:9884/api'
+const LOGIN_URL = 'http://sistema.ieenayarit.org:9884/acceso/'
+
+// const baseURL =
+//   hostname === 'localhost'
+//     ? `http://192.168.2.110:${API_PORT}/api`
+//     : `${protocol}//${hostname}:${API_PORT}/api`
 
 const api = axios.create({
   baseURL,
@@ -24,6 +27,7 @@ function redirectToLogin(returnToPanel = false) {
   window.location.replace(`${LOGIN_URL}?return=${returnToPanel}`)
 }
 
+// Agrega el token automÃ¡ticamente a cada peticiÃ³n
 api.interceptors.request.use(
   (config) => {
     const token = localStorage.getItem('token')
@@ -36,6 +40,7 @@ api.interceptors.request.use(
   (error) => Promise.reject(error),
 )
 
+// Manejo centralizado de respuestas
 api.interceptors.response.use(
   (response) => response,
   (error) => {
@@ -53,3 +58,4 @@ export default boot(({ app }) => {
 })
 
 export { api, redirectToLogin }
+

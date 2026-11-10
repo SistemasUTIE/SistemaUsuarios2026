@@ -146,14 +146,15 @@
           <q-td :props="props" class="text-right">
             <q-btn
               v-if="props.row.employee && !props.row.account && authStore.tienePermiso('USER', 'canCreate')"
-              unelevated
-              dense
-              no-caps
+              flat
+              round
               icon="person_add"
-              label="Crear usuario"
               color="primary"
+              aria-label="Crear usuario"
               @click="abrirCrear(props.row.employee)"
-            />
+            >
+              <q-tooltip>Crear usuario</q-tooltip>
+            </q-btn>
             <template v-else-if="props.row.account">
               <q-btn
                 v-if="authStore.tienePermiso('USER', 'canRead')"
@@ -237,12 +238,11 @@
               <q-card-actions align="right">
                 <q-btn
                   v-if="props.row.employee && !props.row.account && authStore.tienePermiso('USER', 'canCreate')"
-                  unelevated
-                  dense
-                  no-caps
+                  flat
+                  round
                   icon="person_add"
-                  label="Crear usuario"
                   color="primary"
+                  aria-label="Crear usuario"
                   @click="abrirCrear(props.row.employee)"
                 />
                 <template v-else-if="props.row.account">
